@@ -17,12 +17,12 @@ default: &default
 #desarrollo
 development:
   adapter: postgresql
-  host: ec2-3-86-169-29.compute-1.amazonaws.com
+  host: ec2-3-220-59-239.compute-1.amazonaws.com
   encoding: unicode
-  database: d81el4u15tt896
+  database: deai2la311qhkl
   pool:     5
-  username: gsysypoqgzjmfq
-  password: 03fd88af579253f6c23b5d5f1a448510ed77d92ccc411483df658bbedc0bdbef
+  username: kqdkeamtqgfwwv
+  password: 7bcec1606bb5e1ec2ab7d7ce32e7278a1619030f630e825aea177d83ce76a8b5
   template: template0
 
 
