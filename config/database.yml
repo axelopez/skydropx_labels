@@ -1,0 +1,38 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+#produccion
+#development:
+#  adapter: postgresql
+#  host: ec2-34-202-114-208.compute-1.amazonaws.com
+#  encoding: unicode
+#  database: d1s1e0ar2l3lce
+#  pool:     5
+#  username: ufklf7b1g1m16k
+#  password: p022a4033b106d56bf8b88247b1d9fe829973f321a566362d09dd5519bcbb0620
+#  template: template0
+
+#desarrollo
+development:
+  adapter: postgresql
+  host: ec2-3-86-169-29.compute-1.amazonaws.com
+  encoding: unicode
+  database: d81el4u15tt896
+  pool:     5
+  username: gsysypoqgzjmfq
+  password: 03fd88af579253f6c23b5d5f1a448510ed77d92ccc411483df658bbedc0bdbef
+  template: template0
+
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+#test:
+#  adapter: sqlite3
+#  database: db/test.sqlite3
+
+#production:
+#  <<: *default
+#  database: db/production.sqlite3
