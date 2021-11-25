@@ -60,3 +60,6 @@ gem 'devise'
 gem 'annotate'
 gem 'json2table'
 gem 'devise-bootstrap-views', '~> 1.0'
+gem 'simple_form'
+gem "aws-sdk-s3"
+gem "dynamoid"

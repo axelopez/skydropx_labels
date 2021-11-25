@@ -8,9 +8,19 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= render "/layouts/application/css" %>
+
   </head>
 
   <body>
-    <%= yield %>
+     
+    <%= render "/layouts/application/navigation" %>
+
+    <div class="container" style="margin-top:30px;margin-top:75px;">
+      <%= yield %>
+    
+    </div>
   </body>
+    <%= render "/layouts/application/js" %>
 </html>
