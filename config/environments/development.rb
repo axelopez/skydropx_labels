@@ -64,7 +64,7 @@ Rails.application.configure do
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
-  # Annotate rendered view with file names.
+   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
 
   # Use an evented file watcher to asynchronously detect changes in source code,
@@ -73,4 +73,7 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  ENV["REDISCLOUD_URL"] = "redis://default:fspbevIol1bz0tzVFZzNW45oS5CEfmv4@redis-11891.c74.us-east-1-4.ec2.cloud.redislabs.com:11891"
+
+  Redis.current = Redis.new(url:"redis://default:fspbevIol1bz0tzVFZzNW45oS5CEfmv4@redis-11891.c74.us-east-1-4.ec2.cloud.redislabs.com:11891")
 end

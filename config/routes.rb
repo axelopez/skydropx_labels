@@ -1,5 +1,6 @@
 require 'sidekiq/web'
 Rails.application.routes.draw do
+  resources :tokens
   devise_for :users
   get 'pages/index'
   authenticate :user do
