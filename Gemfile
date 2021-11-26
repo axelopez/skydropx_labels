@@ -63,5 +63,7 @@ gem 'devise-bootstrap-views', '~> 1.0'
 gem 'simple_form'
 gem "aws-sdk-s3"
 gem "dynamoid"
-gem 'kaminari' 
+gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
+gem 'rubyzip'
+gem "sidekiq-cron", "~> 1.1"

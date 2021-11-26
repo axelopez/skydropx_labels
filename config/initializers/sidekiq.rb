@@ -18,5 +18,4 @@ Sidekiq.configure_client do |config|
 	config.redis = { url: ENV.fetch("REDISCLOUD_URL") }
 end
 
-
-#Sidekiq::Web.app_url = '/">Regresar</a><a style="display:none'
+#Sidekiq::Cron::Job.create(name: 'Retry Worker - every 5 min', cron: '*/5 * * * *', class: 'RetryWorker')

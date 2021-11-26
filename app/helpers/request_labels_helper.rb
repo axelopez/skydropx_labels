@@ -1,0 +1,2 @@
+module RequestLabelsHelper
+end

@@ -5,10 +5,35 @@
 
   <div class="form-inputs">
     <%= f.input :customer %>
-    <%= f.input :token %>
+    <div class="row">
+      <div class="col-10">
+        <%= f.input :token %>
+      </div>
+      <div class="col-2" style="text-align: center; vertical-align:middle;padding-top:30px;">
+        <a href="javascript:void(0);" id="random_token" class="btn btn-danger btn-block">Generate Token</a>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <hr>
+  <div class="form-actions ">
+    <%= f.button :submit, class: "btn btn-success" %>
+    <%= link_to 'Back', "Save",tokens_path, style: "float: right;", class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<script>
+
+  let getRandomString = (length) => {
+      var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var result = '';
+      for ( var i = 0; i < length; i++ ) {
+          result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+      }
+      return result;
+  }
+
+
+  $("#random_token").click(()=>{    
+    $("#token_token").val(getRandomString(50));
+  });
+</script>

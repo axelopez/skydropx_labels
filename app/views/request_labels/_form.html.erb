@@ -1,0 +1,33 @@
+
+<%= simple_form_for(@request_label) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :token, label: "Customer" %>
+    <%= f.input :request, input_html: {rows: 10} %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Save", class: "btn btn-success" %>
+    <%= link_to 'Back', request_labels_path, style: "float: right;", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+
+<script>
+
+
+  prettyPrint = () => {
+    var ugly = document.getElementById('request_label_request').value;
+    var obj = JSON.parse(ugly);
+    var pretty = JSON.stringify(obj, undefined, 4);
+    document.getElementById('request_label_request').value = pretty;
+  }
+
+  $("#request_label_request").change(() => {
+    prettyPrint();
+  });
+
+</script>

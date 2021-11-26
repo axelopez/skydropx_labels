@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron jumbotron-fluid bg-sky text-white" >
+  <div class="container">
+    <h1>Labels Requests</h1>
+  </div>
+</div>
+
+
+<table class="table table-stripped table-hover">
+  <thead>
+    <tr>
+      <th>Created at</th>
+      <th>Customer</th>
+      <th>Identifier</th>
+      <th>Status</th>
+      <th>Last Update</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @request_labels.each do |request_label| %>
+      <tr>
+        <td><%= formato_fecha_hora request_label.created_at %></td>
+        <td><%= request_label.token.customer %></td>
+        <td><%= request_label.identifier %></td>
+        <td><%= request_label.status.titleize %></td>
+            <td><%= formato_fecha_hora request_label.updated_at %> (<%= request_label.try_count||=0 %>)</td>
+        <td>
+          <div class="btn-group">
+            <%= link_to 'Show', request_label, class: "btn btn-primary" %>
+            <% if request_label.status == "completed" %>
+              <a href="<%= request_label.zip.service_url %>" class="btn btn-info">Download ZIP</a>
+            <% end %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ <%= paginate @request_labels, theme: 'twitter-bootstrap-4', outer_window: 3 %>
+<br>
+
+<%= link_to 'New Labels Request', new_request_label_path, class: "btn btn-primary" %>

@@ -25,7 +25,7 @@ class TokensController < ApplicationController
 
     respond_to do |format|
       if @token.save
-        format.html { redirect_to @token, notice: "Token was successfully created." }
+        format.html { redirect_to tokens_path, notice: "Token was successfully created." }
         format.json { render :show, status: :created, location: @token }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class TokensController < ApplicationController
   def update
     respond_to do |format|
       if @token.update(token_params)
-        format.html { redirect_to @token, notice: "Token was successfully updated." }
+        format.html { redirect_to tokens_path, notice: "Token was successfully updated." }
         format.json { render :show, status: :ok, location: @token }
       else
         format.html { render :edit, status: :unprocessable_entity }

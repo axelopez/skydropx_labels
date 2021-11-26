@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ .bg-sky
+ {
+   background-color:    #4E34E1 !important;
+ }
