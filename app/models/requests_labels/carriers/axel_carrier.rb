@@ -3,10 +3,10 @@ module RequestsLabels
         class AxelCarrier
             def self.label(json)
                 files = []
-                files << "#{url}/pdf/1.pdf"
-                files << "#{url}/pdf/2.pdf"
-                files << "#{url}/pdf/3.pdf"
-                files << "#{url}/pdf/4.pdf"
+                files << "#{APP_URL}/pdf/1.pdf"
+                files << "#{APP_URL}/pdf/2.pdf"
+                files << "#{APP_URL}/pdf/3.pdf"
+                files << "#{APP_URL}/pdf/4.pdf"
 
                 file = files.sample
 
