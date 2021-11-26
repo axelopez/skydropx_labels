@@ -3,7 +3,7 @@ class RequestLabelsController < ApplicationController
 
   # GET /request_labels or /request_labels.json
   def index
-    @request_labels = RequestLabel.order("updated_at desc").page params[:page]
+    @request_labels = RequestLabel.where("identifier like ?", "%#{params[:search]}%").order("updated_at desc").page params[:page]
   end
 
   # GET /request_labels/1 or /request_labels/1.json

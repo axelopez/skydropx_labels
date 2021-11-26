@@ -6,7 +6,23 @@
   </div>
 </div>
 
+	<div class="row">
 
+	    <div class="col-11">
+    	    <div id="custom-search-input">
+          <form action="/request_labels">
+                <div class="input-group">
+                    <input type="text" name="search" class="search-query form-control" placeholder="Search Identifier" value="<%= params[:search] %>" />
+                </div>
+            </div>
+          </form>
+        </div>
+
+	    <div class="col-1">
+        <a href="/request_labels" class="btn btn-info btn-block">Clear</a>
+      </div>
+	</div>
+<br>
 <table class="table table-stripped table-hover">
   <thead>
     <tr>

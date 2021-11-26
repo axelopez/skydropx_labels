@@ -10,12 +10,12 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <%= link_to('Home', root_path, class: "nav-link font-weight-bold p-2 text-white")  %>
-          </li>              
+          </li>
           <li class="nav-item">
-            
 
-            <%= link_to('Tasks Manager', sidekiq_web_path, class: "nav-link font-weight-bold p-2 text-white")  %>
-            
+
+            <%= link_to('Tasks Manager', sidekiq_web_path, class: "nav-link font-weight-bold p-2 text-white", target: "_blank")  %>
+
           </li>
 
           <li class="nav-item">
@@ -25,19 +25,19 @@
           <li class="nav-item">
             <%= link_to('Requests', request_labels_path, class: "nav-link font-weight-bold p-2 text-white")  %>
           </li>
-          
-          
+
+
         </ul>
 
-      
+
         <%= link_to('Log out', destroy_user_session_path, method: 'delete', class: "nav-link text-white p-2 font-weight-bold")  %>
 
         <% else %>
-      
-        <a class="nav-link text-white p-2 font-weight-bold" href="/users/sign_in">Login</a> 
-        <a class="nav-link text-white p-2 font-weight-bold" href="/users/sign_up">Register</a> 
+
+        <a class="nav-link text-white p-2 font-weight-bold" href="/users/sign_in">Login</a>
+        <a class="nav-link text-white p-2 font-weight-bold" href="/users/sign_up">Register</a>
         <% end %>
-    
+
       </div>
       </div>
     </nav>
